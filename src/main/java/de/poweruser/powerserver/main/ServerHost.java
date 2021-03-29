@@ -26,7 +26,7 @@ public class ServerHost {
 
     public ServerHost(InetAddress hostAddress, GameBase gameBase) throws LocalServerHostException {
         this.hostAddress = hostAddress;
-        if(hostAddress.isLoopbackAddress() || hostAddress.isSiteLocalAddress() || hostAddress.isAnyLocalAddress() || hostAddress.isLinkLocalAddress()) { throw new LocalServerHostException("Local addresses are not permitted for servers."); }
+        //if(hostAddress.isLoopbackAddress() || hostAddress.isSiteLocalAddress() || hostAddress.isAnyLocalAddress() || hostAddress.isLinkLocalAddress()) { throw new LocalServerHostException("Local addresses are not permitted for servers."); }
         this.gameBase = gameBase;
         this.serverList = new HashMap<Integer, GameServerInterface>();
     }
